@@ -29,7 +29,7 @@ public class Persona {
 
         if (libro != null && !librosPrestados.contains(libro)) {
             AgregarLibrosPrestados(libro);
-            return nombre + " ha tomado prestado el libro '" + libro.titulo() + "'.";
+            return nombre + " ha tomado prestado el libro '" + libro.getTitulo() + "'.";
         }
         return "El libro no está disponible para ser prestado.";
 
@@ -38,10 +38,17 @@ public class Persona {
     public String devolverLibro(Libro libro) {
         if (libro != null && librosPrestados.contains(libro)) {
             devolverLibro(libro);
-            return nombre + " ha devuelto el libro  prestado" + libro.titulo() + "'.";
+            return nombre + " ha devuelto el libro  prestado" + libro.getTitulo() + "'.";
         }
         return "El libro no está en poseción de : "+nombre+ " .";
         
     }
 
+    @Override
+    public String toString() {
+        return "Los datos de la persona son :"+"\n El nombre es: " + nombre + "\n La  edad es:" + edad +
+         "\n El id es :" + id + "\nLos ó el libroPrestado son :" + librosPrestados;
+    }
+
+    
 }
