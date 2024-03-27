@@ -20,6 +20,7 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
         this.id = id;
+        this.librosPrestados = new HashSet<Libro>();
     }
     public Persona(String nombre, int edad, int id, Set<Libro> librosPrestados) {
         this.nombre = nombre;
