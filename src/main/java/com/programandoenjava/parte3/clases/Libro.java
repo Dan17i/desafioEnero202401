@@ -8,6 +8,9 @@ public class Libro {
     private int id;
 
     //--------------------------constructor------------------------------------------
+    public Libro(){
+        
+    }
     public Libro(String titulo, String autor, int anoPublicacion, int id) {
         this.titulo = titulo;
         this.autor = autor;

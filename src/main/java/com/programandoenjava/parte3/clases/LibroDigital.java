@@ -17,6 +17,11 @@ public class LibroDigital extends Libro {
         Url = url;
     }
 
+    @Override
+    public String toString() {
+        return "LibroDigital la URl es : " + Url ;
+    }
+
     
     
 }

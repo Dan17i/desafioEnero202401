@@ -16,14 +16,23 @@ public class Biblioteca {
     public Collection<Libro> getListaLibros() {
         return listaLibros;
     }
-    /*
-     * metodo 
-     * @param 
+
+    /**
+     * Agrega un libro a la biblioteca.
+     *
+     * @param libro El libro que se va a agregar.
      */
     public void agregarLibro(Libro libro) {
         listaLibros.add(libro);
     }
 
+    /**
+     * Busca un libro por su identificador único.
+     *
+     * @param id El identificador único del libro a buscar.
+     * @return El libro encontrado, o null si no se encuentra ningún libro con el
+     *         identificador dado.
+     */
     public Libro buscarLibroId(int id) {
         return listaLibros.stream()
                 .filter(libro -> libro.getId() == id)
